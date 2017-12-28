@@ -241,14 +241,7 @@
                     <source />
                 </configuration>
                 <executions>
-                    <execution>
-                        <goals>
-                            <goal>generateStubs</goal>
-                            <goal>compile</goal>
-                            <goal>generateTestStubs</goal>
-                            <goal>testCompile</goal>
-                        </goals>
-                    </execution>
+          
                 </executions>
                 <dependencies>
                     <dependency>
@@ -300,33 +293,7 @@
                     </execution>
                 </executions>
             </plugin>
-            <plugin>
-                <groupId>org.openclover</groupId>
-                <artifactId>clover-maven-plugin</artifactId>
-                <version>${clover.version}</version>
-                <configuration>
-                    <excludes>
-                        <exclude>**/*Test*</exclude>
-                        <!-- leaving out lang as it mostly comes from other sources -->
-                        <exclude>io/jsonwebtoken/lang/*</exclude>
-                    </excludes>
-                    <methodPercentage>100%</methodPercentage>
-                    <statementPercentage>100%</statementPercentage>
-                    <conditionalPercentage>100%</conditionalPercentage>
-                    <targetPercentage>100%</targetPercentage>
-                </configuration>
-                <executions>
-                    <execution>
-                        <id>clover</id>
-                        <phase>test</phase>
-                        <goals>
-                            <goal>instrument</goal>
-                            <goal>check</goal>
-                            <goal>clover</goal>
-                        </goals>
-                    </execution>
-                </executions>
-            </plugin>
+            
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-release-plugin</artifactId>

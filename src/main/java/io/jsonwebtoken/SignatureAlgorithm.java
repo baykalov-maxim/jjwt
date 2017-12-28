@@ -52,6 +52,13 @@ public enum SignatureAlgorithm {
      * automatically if found in the runtime classpath.
      */
     ES256("ES256", "ECDSA using P-256 and SHA-256", "Elliptic Curve", "SHA256withECDSA", false),
+    
+    /**
+     * JWA algorithm name for {@code ECDSA using K-256 and SHA-256}.  <b>This is not a JDK standard algorithm and
+     * requires that a JCA provider like BouncyCastle be in the runtime classpath.</b>  BouncyCastle will be used
+     * automatically if found in the runtime classpath.
+     */
+    ES256K("ES256K", "ECDSA using K-256 and SHA-256", "Elliptic Curve", "SHA256withECDSA", false),
 
     /**
      * JWA algorithm name for {@code ECDSA using P-384 and SHA-384}.  <b>This is not a JDK standard algorithm and

@@ -40,6 +40,7 @@ public abstract class EllipticCurveProvider extends SignatureProvider {
         m.put(SignatureAlgorithm.ES256, "secp256r1");
         m.put(SignatureAlgorithm.ES384, "secp384r1");
         m.put(SignatureAlgorithm.ES512, "secp521r1");
+        m.put(SignatureAlgorithm.ES256K, "secp256k1");
         return m;
     }
 
@@ -153,6 +154,7 @@ public abstract class EllipticCurveProvider extends SignatureProvider {
 
         switch (alg) {
             case ES256: return 64;
+            case ES256K: return 64;
             case ES384: return 96;
             case ES512: return 132;
             default:
